@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Startup.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="14" Column="3" />
+      <File FileName="Assets/Scripts/FocusPlayer.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/Startup.cs" Line="94" Column="72" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
