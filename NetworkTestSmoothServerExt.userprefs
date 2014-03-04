@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BallKI.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="153" Column="5" />
+      <File FileName="Assets/Scripts/Startup.cs" Line="38" Column="11" />
+      <File FileName="Assets/Scripts/BallKI.cs" Line="41" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
