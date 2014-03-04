@@ -1,4 +1,0 @@
-NetworkTestSmoothServerExt
-==========================
-
-Netzwerktest Andres Projekt
