@@ -1,0 +1,1 @@
+Assets/SkeletonData/Equipment/Weapons/Textures/spaer_texture .jpg
