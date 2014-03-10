@@ -28,7 +28,9 @@ public class PlayerMovement : MonoBehaviour
       float lH = Input.GetAxis ("Horizontal");
       float lV = Input.GetAxis ("Vertical");
       Vector3 lF = CalcForce (lH, lV);
-      networkView.RPC ("AddForce", RPCMode.Server, lF);
+      if (!lF.Equals(Vector3.zero)) {
+        networkView.RPC ("AddForce", RPCMode.Server, lF);
+      }
     } else if (Network.isServer) {
       DoForce (fForce);
     }
