@@ -11,9 +11,13 @@ public class Startup : MonoBehaviour
   private HostData[] hostList;
   public GameObject playerPrefab = null;
   public GameObject terrainObject = null;
+  public GUISkin guiSkin = null;
 
   void OnGUI ()
   {
+    if (guiSkin != null) {
+      GUI.skin = guiSkin;
+    }
     if (!Network.isClient && !Network.isServer && !isClientStart && !isLocal) {
       //levelName = GUI.TextField (new Rect (100, 25, 100, 25), levelName);   
       if (GUI.Button (new Rect (100, 100, 250, 100), "Start Server"))
