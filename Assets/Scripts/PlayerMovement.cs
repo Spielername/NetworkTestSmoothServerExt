@@ -32,7 +32,10 @@ public class PlayerMovement : MonoBehaviour
         networkView.RPC ("AddForce", RPCMode.Server, lF);
       }
     } else if (Network.isServer) {
-      DoForce (fForce);
+      if (!fForce.Equals(Vector3.zero)) {
+        DoForce (fForce);
+        fForce = Vector3.zero;
+      }
     }
     /*
     float v = rigidbody.velocity.magnitude;
