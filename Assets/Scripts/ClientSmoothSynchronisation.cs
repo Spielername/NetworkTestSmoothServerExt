@@ -43,7 +43,7 @@ public class ClientSmoothSynchronisation : MonoBehaviour
       syncDelay = Time.time - lastSynchronizationTime;
       lastSynchronizationTime = Time.time;
       
-      syncEndPosition = lSyncPosition + lSyncVelocity * syncDelay;
+      syncEndPosition = lSyncPosition + lSyncVelocity * syncDelay * 2.0f;
       syncStartPosition = rigidbody.position;
       syncEndQ = lSyncRotation;
       syncStartQ = rigidbody.rotation;
