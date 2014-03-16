@@ -11,8 +11,12 @@ public class WhenClientMakeKinematic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	  if (Network.isClient) {
-      rigidbody.isKinematic = true;
-      collider.isTrigger = true;
+      if (rigidbody != null) {
+        rigidbody.isKinematic = true;
+      }
+      if (collider != null) {
+        collider.isTrigger = true;
+      }
     }
 	}
 }
