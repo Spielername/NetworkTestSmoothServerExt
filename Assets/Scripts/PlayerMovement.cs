@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
  
   public void DoForce (Vector3 aF)
   {
+    ///*
     float v = (rigidbody.velocity + aF).magnitude;
     if (v > maxVelocity) {
       aF.Normalize ();
@@ -73,7 +74,8 @@ public class PlayerMovement : MonoBehaviour
       } else {
         aF = Vector3.zero;
       }
-    } 
+    }
+    //*/
     rigidbody.AddForce (aF);
   }
   
