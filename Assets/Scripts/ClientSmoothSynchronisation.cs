@@ -9,6 +9,7 @@ public class ClientSmoothSynchronisation : MonoBehaviour
   private float syncTime = 0f;
   private Vector3 syncStartPosition = Vector3.zero;
   private Vector3 syncEndPosition = Vector3.zero;
+  private Vector3 syncVelocity = Vector3.zero;
   private Quaternion syncStartQ = Quaternion.identity;
   private Quaternion syncEndQ = Quaternion.identity;
   
@@ -33,8 +34,6 @@ public class ClientSmoothSynchronisation : MonoBehaviour
       //NetworkManager.SerializeColor (stream, ref lSyncColor);
       stream.Serialize (ref lSyncScale);
     } else {
-      rigidbody.isKinematic = true;
-
       stream.Serialize (ref lSyncPosition);
       stream.Serialize (ref lSyncVelocity);
       stream.Serialize (ref lSyncRotation);
@@ -44,7 +43,7 @@ public class ClientSmoothSynchronisation : MonoBehaviour
       syncTime = 0f;
       syncDelay = Time.time - lastSynchronizationTime;
       lastSynchronizationTime = Time.time;
-      
+      syncVelocity = lSyncVelocity;
       syncEndPosition = lSyncPosition + lSyncVelocity * syncDelay;
       syncStartPosition = rigidbody.position;
       syncEndQ = lSyncRotation;
@@ -77,11 +76,12 @@ public class ClientSmoothSynchronisation : MonoBehaviour
   private void SyncedMovement ()
   {
     if (syncTime > syncDelay) {
-      rigidbody.isKinematic = false;
-    } else {
-      syncTime += Time.deltaTime;
-      rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
-      rigidbody.rotation = Quaternion.Lerp (syncStartQ, syncEndQ, syncTime / syncDelay);
+      syncTime = 0.0f;
+      syncStartPosition = rigidbody.position;
+      syncEndPosition = syncStartPosition + syncVelocity * syncDelay;
     }
+    syncTime += Time.deltaTime;
+    rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+    rigidbody.rotation = Quaternion.Lerp (syncStartQ, syncEndQ, syncTime / syncDelay);
   }
 }
