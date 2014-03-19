@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{D296D27D-4C82-169C-EC05-32A99E10564A}") = "NetworkTestSmoothServerExt", "Assembly-CSharp-firstpass-vs.csproj", "{7F66DCEE-1316-34D2-4FC0-ED7974090B39}"
+EndProject
 Project("{D296D27D-4C82-169C-EC05-32A99E10564A}") = "NetworkTestSmoothServerExt", "Assembly-CSharp-vs.csproj", "{A6EBBD16-F403-938F-F2F6-508ED3ABBF46}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F66DCEE-1316-34D2-4FC0-ED7974090B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F66DCEE-1316-34D2-4FC0-ED7974090B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F66DCEE-1316-34D2-4FC0-ED7974090B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F66DCEE-1316-34D2-4FC0-ED7974090B39}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6EBBD16-F403-938F-F2F6-508ED3ABBF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6EBBD16-F403-938F-F2F6-508ED3ABBF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EBBD16-F403-938F-F2F6-508ED3ABBF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																GlobalSection(MonoDevelopProperties) = preSolution
+																																																																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
