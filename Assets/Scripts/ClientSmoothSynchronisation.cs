@@ -33,6 +33,8 @@ public class ClientSmoothSynchronisation : MonoBehaviour
       //NetworkManager.SerializeColor (stream, ref lSyncColor);
       stream.Serialize (ref lSyncScale);
     } else {
+      rigidbody.isKinematic = true;
+
       stream.Serialize (ref lSyncPosition);
       stream.Serialize (ref lSyncVelocity);
       stream.Serialize (ref lSyncRotation);
@@ -74,11 +76,12 @@ public class ClientSmoothSynchronisation : MonoBehaviour
 
   private void SyncedMovement ()
   {
-    if (rigidbody.position.Equals(syncEndPosition)) {
-      Debug.Log("no movement!");
+    if (syncTime > syncDelay) {
+      rigidbody.isKinematic = false;
+    } else {
+      syncTime += Time.deltaTime;
+      rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+      rigidbody.rotation = Quaternion.Lerp (syncStartQ, syncEndQ, syncTime / syncDelay);
     }
-    syncTime += Time.deltaTime;
-    rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
-    rigidbody.rotation = Quaternion.Lerp (syncStartQ, syncEndQ, syncTime / syncDelay);
   }
 }
