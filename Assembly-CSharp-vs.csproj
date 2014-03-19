@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Startup.cs" />
      <Compile Include="Assets\Scripts\StayOnContact.cs" />
      <Compile Include="Assets\Scripts\WhenClientMakeKinematic.cs" />
+     <Compile Include="Assets\SimpleGameController.cs" />
      <None Include="Assets\SkeletonData\animations.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
