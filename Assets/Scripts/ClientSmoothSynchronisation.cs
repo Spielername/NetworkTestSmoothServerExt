@@ -74,6 +74,9 @@ public class ClientSmoothSynchronisation : MonoBehaviour
 
   private void SyncedMovement ()
   {
+    if (rigidbody.position.Equals(syncEndPosition)) {
+      Debug.Log("no movement!");
+    }
     syncTime += Time.deltaTime;
     rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
     rigidbody.rotation = Quaternion.Lerp (syncStartQ, syncEndQ, syncTime / syncDelay);

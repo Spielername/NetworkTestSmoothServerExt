@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimpleGameController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="78" Column="7" />
+      <File FileName="Assets/SimpleGameController.cs" Line="25" Column="32" />
+      <File FileName="Assets/Scripts/Startup.cs" Line="165" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
